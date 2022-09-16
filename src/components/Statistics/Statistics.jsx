@@ -1,17 +1,17 @@
 import PropTypes from 'prop-types';
 import { StaticList } from './StatInfo/StatList';
 import { StatisticStyle } from './Statistic.styled';
-import { CommonStyle } from 'components/commonStyle/Common.styled';
+import { CommonStyleDiv } from 'components/commonStyle/Common.styled';
 import { HeadTitleStatistic } from './Statistic.styled';
 export const Statistic = ({ stat, title }) => {
   return (
     <section>
-      <CommonStyle>
+      <CommonStyleDiv>
         {title && <HeadTitleStatistic>{title}</HeadTitleStatistic>}
         <StatisticStyle>
           <StaticList data={stat} />
         </StatisticStyle>
-      </CommonStyle>
+      </CommonStyleDiv>
     </section>
   );
 };

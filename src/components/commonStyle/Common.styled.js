@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-export const CommonStyle = styled.div`
+export const CommonStyleDiv = styled.div`
   background-color: gainsboro;
   width: 400px;
   padding: 15px 15px;
@@ -23,4 +23,8 @@ export const CommonStyleSpan = styled.span`
   font-size: 24px;
   row-gap: 10px;
   column-gap: 10px;
+`;
+
+export const CommonStylePicture = styled.img`
+  border-radius: 50px;
 `;

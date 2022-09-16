@@ -1,7 +1,11 @@
 import PropTypes from 'prop-types';
-import { CommonStyle } from 'components/commonStyle/Common.styled';
+import { constants } from 'components/constant/img-size';
+import {
+  CommonStyleDiv,
+  CommonStylePicture,
+} from 'components/commonStyle/Common.styled';
 import { InfoStats } from './ProfileUnfo/InfoStats';
-import { UserInfo } from './ProfileUnfo/UserInfo';
+import { UserInfo } from './UserInfo/UserInfo';
 import { StyleUser, ListStyle } from './Profile.styled';
 
 export function Profile({
@@ -14,9 +18,13 @@ export function Profile({
   },
 }) {
   return (
-    <CommonStyle>
+    <CommonStyleDiv>
       <StyleUser>
-        <img width={200} src={avatar} alt="User avatar" />
+        <CommonStylePicture
+          width={constants.user}
+          src={avatar}
+          alt={username}
+        />
         <UserInfo text={username} />
         <UserInfo text={`@${tag}`} />
         <UserInfo text={location} />
@@ -26,7 +34,7 @@ export function Profile({
         <InfoStats text="Views" quantity={views} />
         <InfoStats text="Likes" quantity={likes} />
       </ListStyle>
-    </CommonStyle>
+    </CommonStyleDiv>
   );
 }
 
