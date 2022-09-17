@@ -7,7 +7,7 @@ export const FriendItemStyle = styled.li`
   grid-gap: 10px;
   width: 300px;
   height: 60px;
-  border-radiys: 5px;
+  border-radius: 5px;
 `;
 
 export const FriendSpan = styled.span`
