@@ -14,20 +14,10 @@ export const FriendSpan = styled.span`
   width: 20px;
   height: 20px;
   border-radius: 50%;
-`;
-
-export const FriendSpanIsOnline = styled.span`
-  background-color: green;
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-`;
-
-export const FriendSpanIsOffline = styled.span`
-  background-color: red;
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
+  background-color: ${({ prop }) => {
+    if (prop) return `green`;
+    return `red`;
+  }};
 `;
 
 export const FriendImg = styled.img`

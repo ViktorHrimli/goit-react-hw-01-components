@@ -3,14 +3,14 @@ import {
   FriendItemStyle,
   FriendImg,
   FriendParagraph,
+  FriendSpan,
 } from './render--list-styled';
-import { ISOnline } from '../Frendlist';
 
 export function RenderItemFriend(data) {
   return data.map(item => {
     return (
       <FriendItemStyle key={item.id}>
-        {ISOnline(item.isOnline)}
+        <FriendSpan prop={item.isOnline}></FriendSpan>
         <FriendImg src={item.avatar} alt={item.name} width="48" />
         <FriendParagraph>{item.name}</FriendParagraph>
       </FriendItemStyle>

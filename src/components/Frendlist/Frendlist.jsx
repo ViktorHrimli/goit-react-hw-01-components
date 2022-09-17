@@ -2,10 +2,6 @@ import PropTypes from 'prop-types';
 import { CommonStyleDiv } from 'components/commonStyle/Common.styled';
 import { StyleFrendList } from './Frendlist-styled.js';
 import { RenderItemFriend } from './Frendlist-Render/render--list';
-import {
-  FriendSpanIsOffline,
-  FriendSpanIsOnline,
-} from '../Frendlist/Frendlist-Render/render--list-styled';
 export function Frendlist({ data }) {
   return (
     <CommonStyleDiv>
@@ -14,15 +10,6 @@ export function Frendlist({ data }) {
   );
 }
 
-export function ISOnline(bull) {
-  if (bull) return <FriendSpanIsOffline></FriendSpanIsOffline>;
-  return <FriendSpanIsOnline></FriendSpanIsOnline>;
-}
-
 Frendlist.prototype = {
   data: PropTypes.array.isRequired,
-};
-
-ISOnline.prototype = {
-  bull: PropTypes.bool.isRequired,
 };
