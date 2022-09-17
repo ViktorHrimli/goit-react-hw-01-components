@@ -1,8 +1,8 @@
 import PropTypes from 'prop-types';
 import { constants } from 'components/constant/img-size';
 import {
-  CommonStyleDiv,
   CommonStylePicture,
+  CommonStyleDiv,
 } from 'components/commonStyle/Common.styled';
 import { InfoStats } from './ProfileUnfo/InfoStats';
 import { UserInfo } from './UserInfo/UserInfo';

@@ -1,7 +1,9 @@
+import { ThemeProvider } from 'styled-components';
 import { Profile } from './Profile/Profile';
 import { Statistic } from './Statistics/Statistics';
 import { Frendlist } from './Frendlist/Frendlist';
 import { Transaction } from 'Transaction/Transaction';
+import { theme } from './commonStyle/Thema';
 import user from '../user.json';
 import data from '../data.json';
 import friends from '../friends.json';
@@ -18,10 +20,12 @@ export const App = () => {
         color: '#010101',
       }}
     >
-      <Profile data={user} />
-      <Statistic stat={data} title="Upload Stats" />
-      <Frendlist data={friends} />
-      <Transaction data={transactions} />
+      <ThemeProvider theme={theme}>
+        <Profile data={user} />
+        <Statistic stat={data} title="Upload Stats" />
+        <Frendlist data={friends} />
+        <Transaction data={transactions} />
+      </ThemeProvider>
     </div>
   );
 };

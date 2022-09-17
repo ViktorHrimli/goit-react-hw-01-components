@@ -1,13 +1,14 @@
 import styled from 'styled-components';
+import { theme } from '../../commonStyle/Thema';
 
 export const FriendItemStyle = styled.li`
   display: flex;
   justify-content: center;
   align-items: center;
-  grid-gap: 10px;
-  width: 300px;
-  height: 60px;
-  border-radius: 5px;
+  grid-gap: ${`${theme.space[3]}px`};
+  width: ${`${theme.space[8]}px`};
+  height: ${`${theme.space[6]}px`};
+  border-radius: ${`${theme.space[3]}px`}; ;
 `;
 
 export const FriendSpan = styled.span`
@@ -15,13 +16,13 @@ export const FriendSpan = styled.span`
   height: 20px;
   border-radius: 50%;
   background-color: ${({ prop }) => {
-    if (prop) return `green`;
-    return `red`;
+    if (prop) return `${theme.colors.primary}`;
+    return `${theme.colors.muted}`;
   }};
 `;
 
 export const FriendImg = styled.img`
-  border-radius: 50%;
+  border-radius: ${theme.radii.round};
 `;
 
 export const FriendParagraph = styled.p``;

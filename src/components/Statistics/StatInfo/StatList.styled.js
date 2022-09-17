@@ -1,3 +1,4 @@
+import { theme } from 'components/commonStyle/Thema';
 import styled from 'styled-components';
 const randomCreateColor = () => {
   return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
@@ -5,13 +6,13 @@ const randomCreateColor = () => {
 
 export const LiStyleOptions = styled.li`
   display: flex;
-  width: 60px;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  row-gap: 10px;
-  column-gap: 10px;
-  margin-left: 10px;
+  width: ${`${theme.space[6] + 20}px`};
+  row-gap: ${`${theme.space[4]}px`};
+  column-gap: ${`${theme.space[4]}px`};
+  margin-left: ${`${theme.space[4]}px`};
   color: ${randomCreateColor};
   background-color: ${randomCreateColor};
 `;

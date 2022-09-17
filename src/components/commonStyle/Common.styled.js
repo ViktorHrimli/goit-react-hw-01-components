@@ -1,30 +1,52 @@
 import styled from 'styled-components';
+import { theme } from './Thema';
+import {
+  background,
+  color,
+  space,
+  layout,
+  flexbox,
+  grid,
+  position,
+  border,
+} from 'styled-system';
+export const Box = styled('div')(
+  background,
+  color,
+  space,
+  layout,
+  flexbox,
+  grid,
+  position,
+  border
+);
+
 export const CommonStyleDiv = styled.div`
-  background-color: gainsboro;
-  width: 400px;
-  padding: 15px 15px;
-  margin-top: 20px;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+  width: ${`${theme.space[8] * 2}px`};
+  padding: ${`${theme.space[4]}px ${theme.space[4]}px`};
+  margin-top: ${`${theme.space[5]}px`};
+  background: ${theme.colors.background};
   box-shadow: 2px 3px 10px rgba(0, 0, 0, 0.2);
-  border-radius: 20px;
+  border-radius: ${theme.radii.lg};
 `;
 
 export const CommonStyleParagraph = styled.p`
-  font-family: Roboto;
-  font-size: 24px;
+  font-family: ${theme.fonts.monospace};
+  font-size: ${theme.fontSizes.l};
   text-align: center;
 `;
 
 export const CommonStyleSpan = styled.span`
-  font-family: Roboto;
-  font-size: 24px;
-  row-gap: 10px;
-  column-gap: 10px;
+  font-family: ${theme.fonts.heading};
+  font-size: ${theme.fontSizes.l};
+  row-gap: ${`${theme.space[4]}px`};
+  column-gap: ${`${theme.space[4]}px`};
 `;
 
 export const CommonStylePicture = styled.img`
-  border-radius: 50px;
+  border-radius: ${theme.radii.round};
 `;
