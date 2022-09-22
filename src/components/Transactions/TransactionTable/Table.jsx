@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import { TableRowRender, TableD } from './render--table-styled';
+import { TableRowRender, TableD } from './Table.styled';
 export function RenderTable({ data }) {
   return data.map(item => {
     return (

@@ -1,12 +1,11 @@
-import styled from '@emotion/styled';
-import { theme } from 'components/commonStyle/Thema';
+import styled from 'styled-components';
 
 export const InfoStatsStyle = styled.li`
-  font-size: ${theme.fontSizes.l};
+  font-size: ${p => p.theme.fontSizes.l};
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: ${`${theme.space[3]}px`};
-  row-gap: ${`${theme.space[3]}px`};
-  margin-left: ${`${theme.space[3]}px`};
+  gap: ${p => p.theme.space[3]}px;
+  row-gap: ${p => p.theme.space[3]}px;
+  margin-left: ${p => p.theme.space[3]}px;
 `;

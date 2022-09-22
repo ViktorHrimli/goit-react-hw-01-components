@@ -4,10 +4,10 @@ import {
   FriendImg,
   FriendParagraph,
   FriendSpan,
-} from './render--list-styled';
+} from './Friendlist.styled';
 
-export function RenderItemFriend(data) {
-  return data.map(item => {
+export function ItemFriend(prop) {
+  return prop.map(item => {
     return (
       <FriendItemStyle key={item.id}>
         <FriendSpan prop={item.isOnline}></FriendSpan>
@@ -18,7 +18,7 @@ export function RenderItemFriend(data) {
   });
 }
 
-RenderItemFriend.prototype = {
+ItemFriend.prototype = {
   data: PropTypes.exact({
     avatar: PropTypes.string.isRequired,
     name: PropTypes.string.isRequired,

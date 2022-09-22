@@ -1,8 +1,8 @@
 import PropTypes from 'prop-types';
 import { StaticList } from './StatInfo/StatList';
-import { StatisticStyle } from './Statistic.styled';
+import { StatisticStyle } from './Statistics.styled';
 import { CommonStyleDiv } from 'components/commonStyle/Common.styled';
-import { HeadTitleStatistic } from './Statistic.styled';
+import { HeadTitleStatistic } from './Statistics.styled';
 export const Statistic = ({ stat, title }) => {
   return (
     <section>

@@ -7,7 +7,7 @@ import {
   Tableth,
   Tbody,
 } from './Transactions-styled';
-import { RenderTable } from './Transactions--render/render-table';
+import { RenderTable } from './TransactionTable/Table';
 export function Transaction(data) {
   return (
     <CommonStyleDiv>

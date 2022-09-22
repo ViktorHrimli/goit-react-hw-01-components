@@ -1,9 +1,8 @@
-import { theme } from 'components/commonStyle/Thema';
 import styled from 'styled-components';
 
 export const HeadTitleStatistic = styled.h2`
-  font-family: ${theme.fonts.monospace};
-  font-size: ${`${theme.fontSizes.l}`};
+  font-family: ${p => p.theme.fonts.monospace};
+  font-size: ${p => p.theme.fontSizes.l};
 `;
 
 export const StatisticStyle = styled.ul`
